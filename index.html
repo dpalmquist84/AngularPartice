@@ -5,26 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    
 
 </head>
-<body ng-app="" ng-init="myCol='lightblue'">
-    <div >
-        <p>Name:
-            <input type="text" ng-model="name">
-        </p>
-        <p ng-bind="name"></p>
-    </div>
-
-    <div>
-        <p>my fir st expression: {{ 5 + 5 }}</p>
-    </div>
-
-    <input style="background-color: {{myCol}}" ng-model="myCol" value="{{myCol}}">
+<body ng-app="myApp" ng-init="myCol='lightblue'">
     
-    <p ng-init="quantity=1;cost=5">Total in Dollars: {{quantity * cost }}</p>
+
+    <div ng-controller="myCtrl">
+         <div>Name {{user.name}}</div>
+         <div>Location: {{user.location}}</div>
+         <div><img ng-src="{{user.avatar_url}}"></div>
+    </div>
 </body>
 </html>
 
