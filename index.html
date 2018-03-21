@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Angular</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
@@ -11,14 +11,48 @@
     
 
 </head>
-<body ng-app="myApp" ng-init="myCol='lightblue'">
+<body ng-controller="myCtrl">
     
+    <div>{{error}}</div>
+    <div>{{countdown}}</div>
+    <div>
+     
+        <form name="searchUser">
+            <input type="search"  required placeholder="odetocode" ng-model="username"></input>
+            <input type="submit" value="search" ng-click="search(username)"></input>
 
-    <div ng-controller="myCtrl">
-         <div>Name {{user.name}}</div>
-         <div>Location: {{user.location}}</div>
-         <div><img ng-src="{{user.avatar_url}}"></div>
+        </form>
     </div>
+
+    <!-- <div ng-show="user">
+         <h2>Name {{user.name}}</h2>
+         
+         <img ng-src="{{user.avatar_url}}" title="{{user.name}}" />
+
+         Order:
+         <select ng-model="repoSortOrder">
+             <option value="+name">name</option>
+             <option value="-stargazers_count">Stars</option>
+             <option value="+language">Language</option>
+         </select>
+         <table ng-hide="!user">
+             <thead>
+                 <th>name</th>
+                 <th>stars</th>
+                 <th>Language</th>
+             </thead>
+
+             <tbody>
+                 <tr ng-repeat = "repo in repos | orderBy:repoSortOrder">
+                     <td>{{repo.name}}</td>
+                     <td>{{repo.stargazers_count}}</td>
+                     <td>{{repo.language}}</td>
+                 </tr>
+             </tbody>
+            
+         </table>
+    </div> -->
+    <div ng-include="'userdetails.html'"></div>
 </body>
 </html>
 
