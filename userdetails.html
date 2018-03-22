@@ -1,4 +1,4 @@
-<div id="userDetails">
+
     <h2>Name {{user.name}}</h2>
 
     <img ng-src="{{user.avatar_url}}" title="{{user.name}}" /> Order:
@@ -15,6 +15,7 @@
         </thead>
 
         <tbody>
+    <div id="userDetails">
             <tr ng-repeat="repo in repos | orderBy:repoSortOrder">
                 <td>{{repo.name}}</td>
                 <td>{{repo.stargazers_count}}</td>

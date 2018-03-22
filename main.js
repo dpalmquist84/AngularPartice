@@ -11,6 +11,8 @@ app.controller("myCtrl", function($scope, $http, $interval, $log, $anchorScroll,
 
     var onRepos =function(response) {
         $scope.repos = response.data;
+        $location.hash = "userDetails";
+        $anchorScroll();
     }
 
     var onError = function(reason){
