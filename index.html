@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +9,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
-    
+
 
 </head>
+
 <body ng-controller="myCtrl">
-    
+
     <div>{{error}}</div>
     <div>{{countdown}}</div>
     <div>
-     
+
         <form name="searchUser">
-            <input type="search"  required placeholder="odetocode" ng-model="username"></input>
+            <input type="search" required placeholder="odetocode" ng-model="username"></input>
             <input type="submit" value="search" ng-click="search(username)"></input>
 
         </form>
@@ -54,6 +56,5 @@
     </div> -->
     <div ng-include="'userdetails.html'"></div>
 </body>
+
 </html>
-
-

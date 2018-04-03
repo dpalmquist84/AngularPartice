@@ -9,6 +9,16 @@ module.exports= function () {
             filename: 'app.js'
         },
 
+        reslove: {
+            extensions: ['.ts', '.js']
+        },
+
+        module: {
+            rules: [
+                { test: /\.ts$, loader: '@ngtools/webpack' }
+            ]
+        },
+
         plugins: [
             new CopyWebpackPlugin([
                  { from : 'src/assets', to: 'assets'}
