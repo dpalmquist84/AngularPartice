@@ -1,4 +1,4 @@
-
+<div id="userDetails">
     <h2>Name {{user.name}}</h2>
 
     <img ng-src="{{user.avatar_url}}" title="{{user.name}}" /> Order:
@@ -7,21 +7,22 @@
         <option value="-stargazers_count">Stars</option>
         <option value="+language">Language</option>
     </select>
-    <table>
-        <thead>
-            <th>name</th>
-            <th>stars</th>
-            <th>Language</th>
-        </thead>
-
-        <tbody>
-    <div id="userDetails">
-            <tr ng-repeat="repo in repos | orderBy:repoSortOrder">
-                <td>{{repo.name}}</td>
-                <td>{{repo.stargazers_count}}</td>
-                <td>{{repo.language}}</td>
-            </tr>
-        </tbody>
-
-    </table>
 </div>
+
+<table>
+    <thead>
+        <th>name</th>
+        <th>stars</th>
+        <th>Language</th>
+    </thead>
+
+    <tbody>
+
+        <tr ng-repeat="repo in repos | orderBy:repoSortOrder">
+            <td>{{repo.name}}</td>
+            <td>{{repo.stargazers_count}}</td>
+            <td>{{repo.language}}</td>
+        </tr>
+    </tbody>
+
+</table>
