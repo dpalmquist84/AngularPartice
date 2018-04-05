@@ -1,5 +1,6 @@
-<div id="userDetails">
+<div>
     <h2>Name {{user.name}}</h2>
+    {{error}}
 
     <img ng-src="{{user.avatar_url}}" title="{{user.name}}" /> Order:
     <select ng-model="repoSortOrder">
@@ -26,3 +27,4 @@
     </tbody>
 
 </table>
+<a href="#/main">Back to Main</a>

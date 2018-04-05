@@ -15,12 +15,11 @@
     };
 
     $scope.search = function(username) {
-      $log.info("Searching for " + username);
-      github.getUser(username).then(onUserComplete, onError);
       if (countdownInterval) {
         $interval.cancel(countdownInterval);
         $scope.countdown = null;
       }
+      $location.path("/user/" + username);
     };
 
     $scope.username = "angular";
