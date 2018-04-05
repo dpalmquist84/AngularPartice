@@ -1,5 +1,5 @@
 (function() {
-  var app = angular.module("githubViewer", []);
+  var app = angular.module("githubViewer");
 
   var MainController = function(
     $scope,
